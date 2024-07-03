@@ -1,0 +1,1 @@
+GALHALO_BASE = 'galhalo'
