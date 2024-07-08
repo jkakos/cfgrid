@@ -61,6 +61,8 @@ dmypy.json
 /pyproject.toml
 /catalogs/
 /data/*
+!/data/simulation/
+/data/simulation/*
 /results/
 !/data/RPA15_data
 !/data/sdss_cuts.dat
