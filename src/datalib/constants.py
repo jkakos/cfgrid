@@ -9,9 +9,6 @@ CATALOGS = {
     "MPAJHU": "mpajhu",
     "BPSnapshot": "bpsnapshot",
     "BPSnapshotZSpace": "bpsnapshot",
-    "BPSnapshotScatter": "bpsnapshot",
-    "CuiModel": "bpsnapshot",
-    "InverseCuiModel": "bpsnapshot",
     "Empire": "empire",
 }
 DATASETS = [
