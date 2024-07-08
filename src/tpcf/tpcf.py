@@ -460,10 +460,10 @@ class ObsLightConeCrossTPCF:
 
         if self.random is None:
             RAR1, DECR1, CZR1 = self.runner1.get_random_coords(
-                RAD1, DECD1, CZD1, sample_size=10**5, process=process
+                CZD1, sample_size=10**5, process=process
             )
             RAR2, DECR2, CZR2 = self.runner2.get_random_coords(
-                RAD2, DECD2, CZD2, sample_size=10**5, process=process
+                CZD2, sample_size=10**5, process=process
             )
         else:
             RAR1 = self.random['RA'].to_numpy()
