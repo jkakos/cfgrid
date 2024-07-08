@@ -47,7 +47,7 @@ pip-delete-this-directory.txt
 __pypackages__/
 
 # Environments
-.venv
+.venv*
 
 # mkdocs documentation
 /site
@@ -58,6 +58,7 @@ __pypackages__/
 dmypy.json
 
 /pe.py
+/pyproject.toml
 /catalogs/
 /data/*
 /results/
