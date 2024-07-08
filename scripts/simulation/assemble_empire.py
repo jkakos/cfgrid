@@ -8,7 +8,7 @@ import config
 
 
 def main() -> None:
-    files_dir = config.CATALOG_DIR.joinpath('Empire')
+    files_dir = config.EMPIRE_CATALOG_DIR
     filenames = os.listdir(files_dir)
     files = [
         pathlib.Path(files_dir, file) for file in filenames if file.endswith('.dat')

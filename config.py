@@ -11,6 +11,7 @@ ROOT_DIR = pathlib.Path(__file__).parent
 DATA_DIR = ROOT_DIR.joinpath('data')
 CATALOG_DIR = ROOT_DIR.joinpath('catalogs')
 BP_CATALOG_DIR = CATALOG_DIR.joinpath('BP_snapshots')
+EMPIRE_CATALOG_DIR = CATALOG_DIR.joinpath('Empire')
 SIM_DIR = DATA_DIR.joinpath('simulation')
 BASE_MOCK_DIR = SIM_DIR.joinpath('base')
 MSTAR_MOCK_DIR = SIM_DIR.joinpath('mstar')
