@@ -15,7 +15,7 @@ def main() -> None:
     ]
 
     data = pd.concat(
-        [pd.read_csv(file, delim_whitespace=True) for file in files], ignore_index=True
+        [pd.read_csv(file, sep='\s+') for file in files], ignore_index=True
     )
     data = data.rename(
         {

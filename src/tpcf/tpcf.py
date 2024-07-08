@@ -291,10 +291,7 @@ class ObsLightConeTPCF:
         """
         filepath = config.DATA_DIR.joinpath(config.RANDOM)
         random = pd.read_csv(
-            filepath,
-            names=['RA', 'DEC', 'unknown1', 'unknown2'],
-            delim_whitespace=True,
-            **kwargs,
+            filepath, names=['RA', 'DEC', 'unknown1', 'unknown2'], sep='\s+', **kwargs
         )
 
         if process:

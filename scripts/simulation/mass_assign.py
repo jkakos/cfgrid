@@ -150,14 +150,14 @@ def _main(
     for scatter in scatters:
         msmh_cen = pd.read_csv(
             config.SIM_DIR.joinpath(f'cen_galaxy_halo_{scatter}.dat'),
-            delim_whitespace=True,
+            sep='\s+',
             index_col=False,
             skipinitialspace=True,
             usecols=['#logMs', 'logMhalo', 'logvmax'],
         )
         msmh_sat = pd.read_csv(
             config.SIM_DIR.joinpath(f'sat_galaxy_halo_{scatter}.dat'),
-            delim_whitespace=True,
+            sep='\s+',
             index_col=False,
             skipinitialspace=True,
             usecols=['#logMs', 'logMhalo', 'logvmax'],
@@ -248,11 +248,7 @@ def _main(
             chunk_num = -1
 
             with pd.read_csv(
-                bp_path,
-                names=header,
-                comment='#',
-                delim_whitespace=True,
-                chunksize=CHUNKSIZE,
+                bp_path, names=header, comment='#', sep='\s+', chunksize=CHUNKSIZE
             ) as reader:
                 for data in tqdm(reader, total=APPROX_FILE_LENGTH // CHUNKSIZE):
                     chunk_num += 1

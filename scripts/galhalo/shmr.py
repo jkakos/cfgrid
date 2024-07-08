@@ -117,12 +117,8 @@ def more_2011_shmr(mh: npt.NDArray) -> tuple[npt.NDArray, npt.NDArray]:
 def rpa_2015_shmr() -> (
     tuple[npt.NDArray, npt.NDArray, npt.NDArray, npt.NDArray, npt.NDArray, npt.NDArray]
 ):
-    red = pd.read_csv(
-        config.DATA_DIR.joinpath('RPA15_data', 'mhmsR.dat'), delim_whitespace=True
-    )
-    blue = pd.read_csv(
-        config.DATA_DIR.joinpath('RPA15_data', 'mhmsB.dat'), delim_whitespace=True
-    )
+    red = pd.read_csv(config.DATA_DIR.joinpath('RPA15_data', 'mhmsR.dat'), sep='\s+')
+    blue = pd.read_csv(config.DATA_DIR.joinpath('RPA15_data', 'mhmsB.dat'), sep='\s+')
 
     h = consts.H0 / 100
     red['logMs'] += 2 * np.log10(0.7 / h)
