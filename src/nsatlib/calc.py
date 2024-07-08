@@ -30,6 +30,7 @@ def calc_stats(
     sat_group_counts = sats.groupby(group_id_str).size()
 
     for gid, count in sat_group_counts.items():
+        assert isinstance(count, int)
         group_ids[gid] += count
 
     sat_counts = list(group_ids.values())
