@@ -17,5 +17,5 @@ RP_MAX = [1, 2]
 RPI_MAX = [2, 3, 4, 5, 6, 7, 8]
 DDP_MASS_BINS = (10.0, 11.0)
 
-CONFIG_TYPE = configurations.MPAConfigVolume1
+CONFIG_TYPE = configurations.MPAConfigVolume3
 CONFIG = CONFIG_TYPE()
